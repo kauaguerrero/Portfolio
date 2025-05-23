@@ -51,6 +51,7 @@ nav ul {
 }
 
 nav a {
+    margin-top: 15px;
     color: #ffd000;
     text-decoration: none;
     transition: color 0.3s;

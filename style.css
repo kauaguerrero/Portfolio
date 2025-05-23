@@ -1,7 +1,7 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 a {
@@ -23,21 +23,25 @@ body {
 
 header {
     background: #08002b;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    height: auto;
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
+    padding: 0 2rem;
 }
 
 header h1 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     color: #fae8b2;
+    white-space: nowrap;
 }
 
 nav ul {
@@ -73,33 +77,36 @@ section h2 {
 }
 
 .projeto-card {
-  background: #08002b;
-  padding: 1.2rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    background: #08002b;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .projeto-card h3 {
-  color: #fae8b2;
-  margin-bottom: 0.3rem;
+    color: #fae8b2;
+    margin-bottom: 0.3rem;
 }
 
 .projeto-card a {
-  color: #ffd000;
-  text-decoration: none;
-  font-weight: bold;
+    color: #ffd000;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 footer {
-  text-align: center;
-  padding: 1.5rem;
-  background: #08002b;
-  font-size: 0.9rem;
-  color: #94a3b8;
+    text-align: center;
+    padding: 1.5rem;
+    background: #08002b;
+    font-size: 0.9rem;
+    color: #94a3b8;
 }
 
 .imagem-borda {
+    width: 100px;
+    height: auto;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .burguer {
@@ -113,10 +120,32 @@ footer {
 
 
 @media (max-width: 768px) {
-    .projetos-grid {
-        flex-direction: column;
-        gap: 15px;
-    }
+  header .container {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .imagem-borda {
+    width: 60px;
+    height: 60px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .projetos-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
 
+section:first-of-type {
+  margin-top: 1rem;
+}

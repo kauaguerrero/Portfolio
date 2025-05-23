@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+    color: #ffd000;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #222222;
+    color: #ffeaac;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    background: #08002b;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #fae8b2;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #ffd000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #fae8b2;
+}
+
+section {
+    padding: 1.5rem 0;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #e4d3a2;
+    margin-bottom: 1rem;
+}
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.projeto-card {
+  background: #08002b;
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.projeto-card h3 {
+  color: #fae8b2;
+  margin-bottom: 0.3rem;
+}
+
+.projeto-card a {
+  color: #ffd000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #08002b;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.imagem-borda {
+    border-radius: 10px;
+}
+
+.burguer {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+    border: 2px solid white;
+    object-fit: cover;
+    margin-top: 1rem;
+}
+
+
+@media (max-width: 768px) {
+    .projetos-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
